@@ -1,8 +1,9 @@
 #!/bin/bash
 
-
 this_dir=$(realpath $(dirname $BASH_SOURCE))
 
 source "${this_dir}/helpers.sh"
 
-_latest_release
+sudo bash "${this_dir}/root_init.sh"
+
+bash user_init.sh

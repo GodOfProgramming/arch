@@ -1,14 +1,11 @@
 #!/bin/bash
 
-# Manual steps
-# pacman -S git
-
 set -e
 
 this_dir=$(realpath $(dirname $BASH_SOURCE))
 
-source "${this_dir}/helpers.sh"
+source "${this_dir}/scripts/helpers.sh"
 
-sudo bash "${this_dir}/init.sh"
+bash "${this_dir}/scripts/init.sh"
 
-source "${this_dir}/install_rust.sh"
+source "${this_dir}/scripts/rust.sh"
